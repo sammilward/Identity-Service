@@ -1,0 +1,13 @@
+version: '3'
+services:
+  identityservice:
+    image: 127.0.0.1:5000/identityservice
+    hostname: "identityservice"
+    ports:
+      - "5001:80"
+    networks:
+      - microservicenetwork
+
+networks:
+  microservicenetwork:
+    external: true
